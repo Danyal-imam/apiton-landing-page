@@ -1,15 +1,12 @@
 import React from 'react';
 import {
 	Grid,
-	Button,
 	makeStyles,
 	createStyles,
 	Typography,
 	Card,
 	CardContent,
 	Container,
-	SvgIcon,
-	IconButton
 } from '@material-ui/core';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import CommentIcon from '@material-ui/icons/Comment';
@@ -87,18 +84,21 @@ const useStyles = makeStyles((theme) =>
 const news = [
 	{
 		date: '20 Fab',
+		id:'1',
 		comment: '2 comments',
 		details: 'Leverage agile frame works to provide a synopsis for',
 		image: 'http://layerdrops.com/apitonhtml/assets/images/blog/blog-1-1.jpg'
 	},
 	{
 		date: '20 Fab',
+		id:'2',
 		comment: '2 comments',
 		details: 'Launch New Mobile App Marketing Pitfalls To Avoid',
 		image: 'http://layerdrops.com/apitonhtml/assets/images/blog/blog-1-2.jpg'
 	},
 	{
 		date: '20 Fab',
+		id:'3',
 		comment: '2 comments',
 		details: 'Bring to the table win-win survival strategies domination.',
 		image: 'http://layerdrops.com/apitonhtml/assets/images/blog/blog-1-3.jpg'
@@ -122,17 +122,17 @@ function News() {
 			</div>
 			<div>
 				<Container maxWidth="lg">
-					<Grid container justify="center" className={classes.cardGroup}>
+					<Grid container justify="center" className={classes.cardGroup} >
 						{news.map((item) => (
-							<Grid item xs={12} sm={12} md={4}>
-								<Card className={classes.root} variant="outlined" className={classes.card}>
+							<Grid item xs={12} sm={12} md={4} key={item.id}>
+								<Card variant="outlined" className={classes.card} >
 									<CardContent>
-										<img src={item.image} className={classes.blogImage} />
+										<img src={item.image} className={classes.blogImage} alt='blog'/>
 										<div className={classes.comment}>
-											<Typography Typography variant="body1">
+											<Typography  variant="body1">
 												<AccessTimeIcon className={classes.icon} /> {item.date}
 											</Typography>
-											<Typography Typography variant="body1">
+											<Typography  variant="body1">
 												<CommentIcon className={classes.icon} /> {item.comment}
 											</Typography>
 										</div>

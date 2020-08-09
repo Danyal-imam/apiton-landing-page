@@ -3,14 +3,11 @@ import Features2 from './Features2'
 import Features3 from './Features3'
 import {
 	Grid,
-	Button,
 	makeStyles,
 	createStyles,
 	Typography,
 	Card,
 	CardContent,
-	SvgIcon,
-	IconButton
 } from '@material-ui/core';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -88,6 +85,7 @@ function Features() {
 								<img
 									src="https://image.flaticon.com/icons/svg/2306/2306224.svg"
 									className={classes.icon}
+									alt='icon'
 								/>
 								<Typography gutterBottom variant="subtitle1" className={classes.cardHeading}>
 									Easy to Edit
@@ -99,11 +97,13 @@ function Features() {
 						</Card>
 					</Grid>
 					<Grid item xs={12} sm={6} md={3}>
-						<Card className={classes.root} variant="outlined" className={classes.card}>
+						<Card className={`${classes.root} ${classes.card}`}variant="outlined">
 							<CardContent>
 								<img
 									src="https://image.flaticon.com/icons/svg/3215/3215177.svg"
 									className={classes.icon}
+									alt='icon'
+
 								/>
 								<Typography gutterBottom variant="subtitle1" className={classes.cardHeading}>
 									Fully Secure
@@ -136,6 +136,8 @@ function Features() {
 								<img
 									src="https://image.flaticon.com/icons/svg/3182/3182314.svg"
 									className={classes.icon}
+									alt='icon'
+
 								/>
 
 								<Typography gutterBottom variant="subtitle1" className={classes.cardHeading}>

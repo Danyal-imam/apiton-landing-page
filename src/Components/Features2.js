@@ -5,10 +5,6 @@ import {
 	makeStyles,
 	createStyles,
 	Typography,
-	Card,
-	CardContent,
-	SvgIcon,
-	IconButton,
 	List,
 	ListItem,
 	ListItemAvatar,
@@ -40,6 +36,7 @@ const useStyles = makeStyles((theme) => createStyles({
 	image:{
 		maxWidth:'100%',
 		height:'auto',
+		overflow:'hidden',
 	}
 }));
 
@@ -63,10 +60,10 @@ function Features2() {
 
 	return (
 		<div className={classes.startSection}>
-			<Container maxWidth='large'>
+			<Container maxWidth='lg'>
 			<Grid container justify="center">
 				<Grid item xs={12} sm={12} md={6} ref={elementRef}>
-					<img src="http://layerdrops.com/apitonhtml/assets/images/resources/cta-1-moc-1.png" className={classes.image}/>
+					<img src="http://layerdrops.com/apitonhtml/assets/images/resources/cta-1-moc-1.png" className={classes.image} alt='cell'/>
 				</Grid>
 				<Grid item xs={12} sm={12} md={6}>
 					<Typography gutterBottom variant="subtitle1">

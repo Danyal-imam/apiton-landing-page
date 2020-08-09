@@ -7,10 +7,6 @@ import {
 	makeStyles,
 	createStyles,
 	Typography,
-	Card,
-	CardContent,
-	SvgIcon,
-	IconButton,
 	TextField,
 	Container,
 	MenuItem,
@@ -145,6 +141,7 @@ function Contact() {
 						<img
 							src="https://images.unsplash.com/photo-1487611459768-bd414656ea10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
 							className={classes.image}
+							alt='contact'
 						/>
 					</Grid>
 				</Grid>

@@ -97,16 +97,16 @@ function Feature() {
 			<div>
 				<Grid container justify="center" className={classes.cardGroup} data-aos="zoom-in" duration='2000'>
 					{members.map((item) => (
-						<Grid item xs={12} sm={6} md={3} >
-							<Card className={classes.root} variant="outlined" className={classes.card}>
-								<CardContent className={classes.bg}>
+						<Grid item xs={12} sm={6} md={3} key={item.name}>
+							<Card className={`${classes.root} ${classes.card}`} variant="outlined" >
+								<CardContent className={classes.bg} >
 									<Typography  variant="h6" className={classes.cardHeading}>
 										{item.name}
 									</Typography>
 									<Typography gutterBottom variant="body1" className={classes.cardDescription}>
 										{item.designation}
 									</Typography>
-									<img src={item.image} className={classes.pix}/>
+									<img src={item.image} className={classes.pix} alt="team-member"/>
 								</CardContent>
 							</Card>
 						</Grid>

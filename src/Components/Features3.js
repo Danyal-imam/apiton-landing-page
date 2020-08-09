@@ -5,15 +5,6 @@ import {
 	makeStyles,
 	createStyles,
 	Typography,
-	Card,
-	CardContent,
-	SvgIcon,
-	IconButton,
-	List,
-	ListItem,
-	ListItemAvatar,
-	Avatar,
-	ListItemText,
 	Container
 } from '@material-ui/core';
 import AOS from 'aos';
@@ -74,7 +65,7 @@ function Features3() {
 
 	return (
 		<div className={classes.sectionStart}>
-			<Container maxWidth="large">
+			<Container maxWidth="lg">
 				<Grid container justify="center">
 					<Grid item xs={12} sm={6}>
 						<Typography gutterBottom variant="subtitle1" className={classes.subHeading}>
@@ -98,15 +89,20 @@ function Features3() {
 							src="http://layerdrops.com/apitonhtml/assets/images/resources/cta-2-moc-1.png"
 							className={classes.image}
 							data-aos="zoom-in-left"
+							alt='rating'
 						/>
 						<img
 							src="http://layerdrops.com/apitonhtml/assets/images/resources/cta-2-moc-2.png"
 							className={classes.image}
+							alt='rating'
+
 						/>
 						<img
 							src="http://layerdrops.com/apitonhtml/assets/images/resources/cta-2-moc-3.png"
 							className={classes.image}
 							data-aos="zoom-out-down"
+							alt='rating'
+
 						/>
 					</Grid>
 				</Grid>

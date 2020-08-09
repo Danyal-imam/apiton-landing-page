@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) =>
 			display: 'flex',
 			justifyContent: 'center',
             alignItems: 'center',
-            color:'#fd632f',
+            color:'#fd632f !important',
             paddingBottom:'20px',
             '&:hover':{
                 color:'#fff'
@@ -142,7 +142,7 @@ function Pricing() {
 									title={tier.title}
 									subheader={tier.subheader}
 									titleTypographyProps={{ align: 'center' }}
-									subheaderTypographyProps={{ align: 'center',color:'#fff' }}
+									subheaderTypographyProps={{ align: 'center',}}
 								/>
 								<CardContent>
 									<div className={tier.title !== 'Standard'?classes.cardPricing :classes.cardPricing2}>
@@ -153,7 +153,7 @@ function Pricing() {
 											/mo
 										</Typography>
 									</div>
-									<hr style={{ width: '100%' }} gutterBottom />
+									<hr style={{ width: '100%' }} />
 									<ul>
 										{tier.description.map((desc) => (
 											<Typography component="li" variant="subtitle1" align="center" key={desc} className={classes.desc}>
